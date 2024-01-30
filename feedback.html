@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+
+	<title>Feedback</title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "stylesheet" type = "text/css" href = "feedback_style.css">
+		
+	</head>
+
+	<body>
+		<center>
+        <h2>In case if you wil have any message for me</h2>
+
+        <form action="" method="get">
+            Gender:
+            <label for="male">Male</label>
+            <input type="radio" id="male" value="male" name="Gender">
+            <label for="female">Female</label>
+            <input type="radio" id="female" value="female" name="Gender"><br><br>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <h3>which pages did you like?</h3>
+            <input type="checkbox" id="home" value="home" name="page">
+            <label for="home">Home</label>
+            <input type="checkbox" id="about" value="about" name="page">
+            <label for="about">about</label>
+            <input type="checkbox" id="education" value="education" name="page">
+            <label for="education">education</abel>
+                <input type="checkbox" value="country" id="country" name="page">
+                <label for="country">country</label><br><br>
+                <label>
+                    <strong>Comments:</strong><br>
+                    <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
+                </label>
+                <br><br>
+                <h4>Rate my web-site from 1 to 10</h4>
+                <input type="number" max="10" min="1" id="range" placeholder="1-10"> <br> <br> 
+                <input class = "submitButton" type="submit" value="Submit" onclick = "submitted();">
+        
+        </form>
+    </center>
+
+    <script>
+    	function submitted() {
+    		// alert("Thank you for the message");
+    		// window.location.href = "index.html";
+    		document.querySelector('body').innerHTML = '<p class = "tnanks">Thank you for the message</p> <div><a href ="index.html" class = "backtoHome">back to Home</a></div>';
+    	}
+    </script>
+
+	</body>
+
+</html>
